@@ -1,0 +1,96 @@
+body {
+    background-color: #f7f7f7;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.logo {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.brand {
+    width: 10rem;
+}
+
+.login-container {
+    box-shadow: 0 0 2rem #ddd;
+    background-color: white;
+
+    padding: 3rem;
+    border-radius: 1rem;
+    margin-block: 3rem;
+}
+
+.login-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 280px;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 575px) {
+    .login-wrapper {
+        grid-auto-flow: row;
+        grid-template-columns: none;
+    }
+
+    .login-wrapper>div:first-child {
+        justify-self: center;
+    }
+
+    .login-container {
+        width: 100%;
+        padding: 2rem 1rem;
+        margin-block: 1rem;
+
+    }
+}
+
+
+@-webkit-keyframes zoomInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+}
+
+@keyframes zoomInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+}
+
+.animate__zoomInDown {
+    -webkit-animation-name: zoomInDown;
+    animation-name: zoomInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
